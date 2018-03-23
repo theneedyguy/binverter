@@ -1,0 +1,13 @@
+bitarray==0.8.1
+cffi==1.10.0
+click==6.7
+Flask==0.12.1
+Flask-Misaka==0.4.1
+itsdangerous==0.24
+Jinja2==2.9.6
+MarkupSafe==1.0
+misaka==2.1.0
+olefile==0.44
+pycparser==2.17
+uuid==1.30
+Werkzeug==0.12.1

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+	<title>Binverter Online</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css" integrity="sha384-AysaV+vQoT3kOAXZkl02PThvDr8HYKPZhNT5h/CXfBThSRXQ6jW5DO2ekP5ViFdi" crossorigin="anonymous">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/js/bootstrap.min.js" integrity="sha384-BLiI7JTZm+JWlgKa0M0kGRpJbF2J8q+qreVrKBC47e3K6BW78kGLrCkeRX6I9RoK" crossorigin="anonymous"></script>
+<script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h2 class="display-2">Binverter Online</h2>
+	<h3>Invert your files on a binary level. Online!</h3>
+	<p class="text-right"><a href="{{ url_for('static', filename='app.py') }}">View source code</a></p><br/>
+	<span>Max. upload size: 16MB</span><br/>
+	<span><strong>Supported formats: ['txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif', 'inv', 'mp3', 'doc', 'docx', 'ppt', 'pptx', 'tar', 'gz', '7z', 'zip', 'rar', 'rtf, 'tgz', 'xml', 'json', 'xls', 'xlsx', 'msg']</strong><span><br/><br/>
+
+	<h4>Disclaimer:</h4>
+	<span>Your uploads are deleted immediately after they have been inverted.<span><br/>
+	<span>Each inverted file has a lifetime of 10 minutes before it will be deleted from the server.<span><br/>
+
+      </div>
+      <hr/>
+      <div>
+
+      <form action="upload" method="post" enctype="multipart/form-data">
+	<label class="btn btn-primary btn-lg" for="my-file-selector">
+    	<input id="my-file-selector" type="file" name="file" style="display:none;" onchange="$('#upload-file-info').html($(this).val());">
+    	Browse	
+	</label>
+	<span class='label label-info' id="upload-file-info"></span>
+        <br /><br />
+        <input type="submit" value="Upload" class="btn btn-primary btn-lg">
+      </form>
+      </div>
+<hr/>
+    </div>
+	<div class="container">
+      <div class="footer">
+        <h4 class="text-muted">Changelog</h4>
+	<ul><strong>v1.2</strong></ul>
+	<li>Moved to subdomain.</li>
+	<li>Added new allowed types: .tgz, .xml, .json, .xls, .xlsx, .msg</li>
+	<ul></ul>	
+	<ul><strong>v1.1</strong></ul>
+	<li>Inverted files now each have a lifetime of 10 minutes.</li>
+	<ul></ul>	
+	<ul><strong>v1.0</strong></ul>
+	<li>Initial release.</li>
+	<ul></ul>
+      </div>
+
+      <div>
+  </body>
+</html>

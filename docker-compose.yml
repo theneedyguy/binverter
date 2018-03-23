@@ -1,0 +1,16 @@
+version: '2.1'
+
+networks:
+  binverter-net:
+    driver: bridge
+
+services:
+  binverter:
+    image: ckevi/binverter
+    container_name: binverter
+    restart: unless-stopped
+    ports:
+        - "6699:6699"
+    networks:
+      - binverter-net
+
